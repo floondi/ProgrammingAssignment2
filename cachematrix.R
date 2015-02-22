@@ -1,7 +1,8 @@
-## Put comments here that give an overall description of what your
-## functions do
+## These functions are used together to cache the inverse of a matrix
 
-## Write a short comment describing this function
+## The first function can be given an invertible matrix, and returns a list containing four functions. "setinverse" stores
+## the calculated inverse of the matrix in a cache, "getinverse" retrieves the cached value, the "get" function
+## returns the matrix itself, and "set" allows the matrix to be changed while resetting the cached inverse. 
 
 makeCacheMatrix <- function(x = numeric()) {
         inv <- NULL
@@ -18,7 +19,7 @@ makeCacheMatrix <- function(x = numeric()) {
 }
 
 
-## Write a short comment describing this function
+## This function is used on the output of makeCacheMatrix and calculates the inverse of the matrix inside.
 
 cachesolve <- function(x, ...) {
         inv <- x$getinverse()
